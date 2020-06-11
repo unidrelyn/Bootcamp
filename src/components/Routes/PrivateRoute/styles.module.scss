@@ -1,0 +1,42 @@
+.login {
+  align-content: center;
+  animation-duration: 0.5s;
+  animation-name: example;
+  background: blue;
+  border-radius: 10px;
+  color: white;
+  display: grid;
+  font-style: oblique;
+  height: 300px;
+  letter-spacing: 2px;
+  margin: 10px auto;
+  padding: 10px;
+  text-align: center;
+  width: 50%;
+}
+
+@keyframes example {
+  50% {
+    background-color: grey;
+    transform: scale(1.5, 1.5);
+  }
+}
+
+%login {
+  border: 1px solid blue;
+  border-radius: 10px;
+  height: 30px;
+  margin: 15px auto;
+}
+
+.button {
+  color: blue;
+  @extend %login;
+  text-shadow: 1px 1px grey;
+  width: 50%;
+  &:active {
+    background: green;
+    border: 2px solid red;
+  }
+}
+
